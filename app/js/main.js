@@ -6,31 +6,12 @@ const html = document.documentElement;
 const menuBtn = document.querySelector('.menu-btn');
 const headerNav = document.querySelector('.header__nav.mobile');
 const anchors = document.querySelectorAll('a.header__link.mobile');
-const button = document.querySelector('.home__subname');
-const contractParagraph = document.querySelector('.home__item p');
-const tooltip = document.querySelector('.home__tooltip');
 
 menuBtn.addEventListener('click', () => {
   menuBtn.blur();
   html.classList.toggle('active');
   menuBtn.classList.toggle('active');
   headerNav.classList.toggle('active');
-});
-
-button.addEventListener('click', function () {
-  const contractAddress = contractParagraph.textContent;
-
-  navigator.clipboard.writeText(contractAddress)
-    .then(() => {
-      tooltip.classList.add('visible');
-      setTimeout(() => {
-        tooltip.classList.remove('visible');
-      }, 2000);
-      button.blur();
-    })
-    .catch((error) => {
-      console.error('Error when copying contract address:', error);
-    });
 });
 
 function scrollToTarget(targetId) {

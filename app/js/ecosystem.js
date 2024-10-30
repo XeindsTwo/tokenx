@@ -98,7 +98,7 @@ export function ecosystem() {
         });
       }, 800);
 
-      const colors = ['#fba01a', '#0288BB', '#AB50EA', '#3215D1', '#079837'];
+      const colors = ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'];
       svgPath.style.stroke = colors[index];
       percentageSpans.forEach(function (span, i) {
         span.style.color = colors[i];
